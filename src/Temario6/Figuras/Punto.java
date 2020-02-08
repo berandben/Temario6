@@ -3,21 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Temario6;
+package Temario6.Figuras;
 
 /**
  *
  * @author Ber&ben
  */
 public class Punto {
-    
-    //atributos
 
+    //atributos
     private double x;
     private double y;
-    
-    //constructores
 
+    //constructores
     public Punto(double x, double y) {
 
         this.x = x;
@@ -31,9 +29,8 @@ public class Punto {
         this.y = punto.y;
 
     }
-    
-    //getters
 
+    //getters
     public double getX() {
         return this.x;
     }

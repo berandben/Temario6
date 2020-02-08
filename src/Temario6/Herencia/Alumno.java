@@ -49,4 +49,29 @@ public class Alumno extends Persona {
         this.notaMedia = notaMedia;
     }
 
+    @Override
+    public String getNombre() {
+
+        return "Nombre: " + this.nombre;
+
+    }
+
+    @Override
+    public String getApellidos() {
+
+        return "Alumno:" + this.apellidos;
+    }
+
+    @Override
+    public String toString() {
+
+        StringBuilder cadena = new StringBuilder(super.toString());
+        cadena.append("\n");
+        cadena.append("Grupo: ").append(this.grupo).append("\n");
+        cadena.append("Nota media: ").append(String.format("%6.2f", this.notaMedia));
+
+        return cadena.toString();
+
+    }
+
 }

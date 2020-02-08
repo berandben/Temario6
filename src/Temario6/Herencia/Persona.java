@@ -58,4 +58,17 @@ public abstract class Persona {
 
         this.fechaNacimiento = fechaNacimiento;
     }
+
+    @Override
+    public String toString() {
+
+        StringBuilder cadena = new StringBuilder();
+
+        cadena.append("Nombre: ").append(this.nombre).append("\n");
+        cadena.append("Apellidos: ").append(this.apellidos).append("\n");
+        cadena.append("Fecha de nacimiento: ").append(this.fechaNacimiento);
+
+        return cadena.toString();
+
+    }
 }

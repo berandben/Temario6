@@ -23,7 +23,7 @@ public class Profesor extends Persona {
     Aunque podemos sobreescribirlos con @Override*/
     public Profesor(String nombre, String apellidos, LocalDate fechaNacimiento, double salario, String especialidad) {
 
-         //Con super llamamos al constructor de la clase padre
+        //Con super llamamos al constructor de la clase padre
         super(nombre, apellidos, fechaNacimiento);
         this.salario = salario;
         this.especialidad = especialidad;
@@ -48,6 +48,24 @@ public class Profesor extends Persona {
     public void setEspecialidad(String especialidad) {
 
         this.especialidad = especialidad;
+    }
+
+    @Override
+    public String getNombre() {
+
+        return "Nombre: " + this.nombre;
+    }
+
+    @Override
+    public String toString() {
+
+        StringBuilder cadena = new StringBuilder(super.toString());
+        cadena.append("\n");
+        cadena.append("Salario: ").append(String.format("%7.2f euros", this.salario)).append("\n");
+        cadena.append("Especialidad: ").append(this.especialidad);
+
+        return cadena.toString();
+
     }
 
 }

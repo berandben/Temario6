@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Temario6.Figuras;
+package Temario6.Composicion;
 
 /**
  *
@@ -12,8 +12,8 @@ package Temario6.Figuras;
 public class Punto {
 
     //atributos
-    private double x;
-    private double y;
+    private final double x;
+    private final double y;
 
     //constructores
     public Punto(double x, double y) {

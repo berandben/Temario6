@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Temario6.Figuras;
+package Temario6.Composicion;
 
 /**
  *
@@ -12,8 +12,8 @@ package Temario6.Figuras;
 public class Rectangulo {
 
     //atributos
-    private Punto vertice1;
-    private Punto vertice2;
+    private final Punto vertice1;
+    private final Punto vertice2;
 
     //contructores
     public Rectangulo() {

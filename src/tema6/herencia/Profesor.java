@@ -3,63 +3,58 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Temario6.Herencia;
+package tema6.herencia;
 
+import tema6.herencia.Persona;
 import java.time.LocalDate;
 
 /**
  *
  * @author Ber&ben
  */
-public class Alumno extends Persona {
+public class Profesor extends Persona {
 
-    protected String grupo;
-    protected double notaMedia;
+    protected double salario;
+    protected String especialidad;
 
     /*Con el constructor asignamos los valores a los campos 
     heredados de la clase Persona.
     --NO ES NECESARIO-- crear getters de éstos últimos, podemos llamarlos
     directamente desde la clase padre.
     Aunque podemos sobreescribirlos con @Override*/
-    public Alumno(String nombre, String apellidos, LocalDate fechaNacimiento, String grupo, double notaMedia) {
+    public Profesor(String nombre, String apellidos, LocalDate fechaNacimiento, double salario, String especialidad) {
 
         //Con super llamamos al constructor de la clase padre
         super(nombre, apellidos, fechaNacimiento);
-        this.grupo = grupo;
-        this.notaMedia = notaMedia;
+        this.salario = salario;
+        this.especialidad = especialidad;
+
     }
 
-    public String getgrupo() {
+    public double getSalario() {
 
-        return this.grupo;
+        return this.salario;
     }
 
-    public double getNotaMedia() {
+    public String getEspecialidad() {
 
-        return this.notaMedia;
+        return this.especialidad;
     }
 
-    public void setGrupo(String grupo) {
+    public void setSalario(double salario) {
 
-        this.grupo = grupo;
+        this.salario = salario;
     }
 
-    public void setNotaMedia(double notaMedia) {
+    public void setEspecialidad(String especialidad) {
 
-        this.notaMedia = notaMedia;
+        this.especialidad = especialidad;
     }
 
     @Override
     public String getNombre() {
 
         return "Nombre: " + this.nombre;
-
-    }
-
-    @Override
-    public String getApellidos() {
-
-        return "Alumno:" + this.apellidos;
     }
 
     @Override
@@ -67,8 +62,8 @@ public class Alumno extends Persona {
 
         StringBuilder cadena = new StringBuilder(super.toString());
         cadena.append("\n");
-        cadena.append("Grupo: ").append(this.grupo).append("\n");
-        cadena.append("Nota media: ").append(String.format("%6.2f", this.notaMedia));
+        cadena.append("Salario: ").append(String.format("%7.2f euros", this.salario)).append("\n");
+        cadena.append("Especialidad: ").append(this.especialidad);
 
         return cadena.toString();
 
